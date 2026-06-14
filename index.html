@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Rui Gao is an AI Engineering undergraduate at MBZUAI building ML, LLM, and agentic systems from data pipelines to evaluation."
+      content="Rui Gao is an AI Engineering undergraduate at MBZUAI focused on LLM systems, agentic workflows, and model evaluation."
     />
     <title>Rui Gao | AI Research and Builder Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
@@ -26,11 +26,12 @@
       <section class="intro band">
         <div class="intro-copy">
           <p class="eyebrow">MBZUAI AI Engineering undergraduate</p>
-          <h1>Building ML, LLM, and agentic systems from experiments to evaluation.</h1>
+          <h1>Building LLM systems, agentic workflows, and evaluation pipelines.</h1>
           <p class="lede">
-            I use public projects as research notebooks: runnable pipelines, clear status notes,
-            measured claims, and reproducible artifacts. My current work spans inference-time
-            control, hidden-state geometry, reliable evaluation, and AI for classical Chinese text.
+            I am focused on LLM systems, agentic workflows, and model evaluation, with
+            experience building data pipelines, PyTorch prototypes, and reliability-oriented
+            AI applications. My current interests include statistical learning, sequence
+            modeling, decision systems, NLP, and reliable LLM deployment.
           </p>
           <div class="actions" aria-label="Primary links">
             <a class="button primary" href="https://github.com/ray-suton">View GitHub</a>
@@ -46,8 +47,8 @@
             height="220"
           />
           <figcaption>
-            Freshman AI researcher exploring interpretability, inference-time control, agent
-            systems, and AI for cultural text.
+            B.S. in AI Engineering at Mohamed bin Zayed University of Artificial Intelligence,
+            expected Fall 2029.
           </figcaption>
         </figure>
       </section>
@@ -61,11 +62,55 @@
         <div class="project-grid">
           <article class="project">
             <div>
+              <p class="project-type">Natural-language scheduling product</p>
+              <h3>Chronos</h3>
+              <p>
+                Built an application that converts natural-language scheduling requests into
+                Google Calendar and Outlook events, including preview, edit, delete, multi-event
+                requests, recurring schedules, relative dates, timezone handling, undo/redo,
+                command persistence, auth, and API validation.
+              </p>
+            </div>
+            <a href="https://github.com/ray-suton/Chronos.AI">Repository</a>
+          </article>
+
+          <article class="project">
+            <div>
+              <p class="project-type">Controlled LLM generation</p>
+              <h3>RLM: Defect-Guided Verifier Search</h3>
+              <p>
+                Ongoing ICML 2027-oriented project developing a controlled-generation system
+                that combines RLM-style hidden-context access with Defect-Guided Verifier Search
+                over visible candidates, using typed schemas for facts, forbidden claims,
+                constraints, verifier gates, repair targets, candidate logs, branch budgets,
+                and token accounting.
+              </p>
+            </div>
+            <p class="project-link-note">Repository link withheld while the project is being prepared for an ICML 2027 submission.</p>
+          </article>
+
+          <article class="project">
+            <div>
+              <p class="project-type">NLP and digital humanities</p>
+              <h3>AI Archaeology of Chinese Songci</h3>
+              <p>
+                Ongoing ISMIR 2027-oriented project building a Songci NLP pipeline over
+                classical-poetry JSON corpora, extracting cipai, line-length, rhyme-position,
+                ping/ze tone, and rhythmic features, then encoding character positions, line
+                boundaries, rhyme slots, tone classes, and cipai templates into PyTorch
+                sequence-modeling inputs.
+              </p>
+            </div>
+            <p class="project-link-note">Repository link withheld while the project is being prepared for an ISMIR 2027 submission.</p>
+          </article>
+
+          <article class="project">
+            <div>
               <p class="project-type">Inference policy evaluation</p>
               <h3>Deadline-Valid Replay</h3>
               <p>
-                Reproducibility package for anytime-valid testing of LLM inference policies under
-                latency deadlines.
+                Designed statistical evaluation methods for LLM inference policies under latency
+                deadlines, distinguishing leaderboard gaps from certified policy-level advantages.
               </p>
             </div>
             <a href="https://github.com/ray-suton/Deadline_Valid">Repository</a>
@@ -74,11 +119,11 @@
           <article class="project">
             <div>
               <p class="project-type">Interpretability</p>
-              <h3>Prompt Distance Geometry</h3>
+              <h3>Metric Choice Determines Semantic Geometry</h3>
               <p>
-                Workshop-stage work completed; main-conference expansion in progress. The active
-                public repo focuses on layerwise hidden-state distance analysis across controlled
-                prompt suites.
+                Analyzed layerwise hidden-state geometry in LLMs, showing that raw L2 expansion
+                is driven by norm growth while centered cosine better reveals semantic, topic,
+                and category structure.
               </p>
             </div>
             <a href="https://github.com/ray-suton/LLM_Expansion">Repository</a>
@@ -86,50 +131,15 @@
 
           <article class="project">
             <div>
-              <p class="project-type">Controlled generation</p>
-              <h3>Recursive LLM</h3>
+              <p class="project-type">Symbolic reasoning verification</p>
+              <h3>SymStep</h3>
               <p>
-                RLM-style long-context processing and controlled-refinement experiments, with
-                attention to explicit control objectives and evaluation loops.
+                Co-developed step-level symbolic verification for LLM reasoning, using constraint
+                propagation to check atomic deductions and strengthen constraint-dense logical
+                reasoning.
               </p>
             </div>
-            <a href="https://github.com/ray-suton/recursive-llm">Repository</a>
-          </article>
-
-          <article class="project">
-            <div>
-              <p class="project-type">Builder system</p>
-              <h3>Chronos.AI</h3>
-              <p>
-                Natural-language scheduling system with validation, recurring rules, fallback logic,
-                and calendar workflow handling.
-              </p>
-            </div>
-            <a href="https://github.com/ray-suton/Chronos.AI">Repository</a>
-          </article>
-
-          <article class="project">
-            <div>
-              <p class="project-type">Digital humanities</p>
-              <h3>Song Ci AI Archaeology</h3>
-              <p>
-                Preparing a public research surface for tone-level and rhyme-structure modeling in
-                Chinese Song Ci texts.
-              </p>
-            </div>
-            <a href="https://github.com/ray-suton/Music_Research">Workspace</a>
-          </article>
-
-          <article class="project">
-            <div>
-              <p class="project-type">Agent benchmark</p>
-              <h3>DataAgent-Bench Starter Kit</h3>
-              <p>
-                Benchmark runner structure, configuration workflow, and reproducible evaluation
-                surface for data-agent tasks.
-              </p>
-            </div>
-            <a href="https://github.com/ray-suton/kddcup2026-data-agents-starter-kit">Repository</a>
+            <p class="project-link-note">Workshop paper at IJCAI/ECAI 2026 NILA.</p>
           </article>
         </div>
       </section>
@@ -140,38 +150,34 @@
           <h2>Questions I am building around</h2>
         </div>
         <div class="focus-list">
-          <p>How should LLM inference policies be evaluated when time, tokens, and cost are limited?</p>
+          <p>How should LLM inference policies be evaluated when latency, tokens, and compute are limited?</p>
           <p>When do layerwise hidden-state distances support falsifiable semantic interpretations?</p>
-          <p>How can controlled generation improve validity without hiding latency or quality tradeoffs?</p>
-          <p>What can ML pipelines reveal about structure in classical Chinese poetry?</p>
+          <p>How can controlled generation improve validity without hiding quality or cost tradeoffs?</p>
+          <p>What can sequence models reveal about structure in classical Chinese poetry?</p>
         </div>
       </section>
 
       <section id="signals" class="signals band">
         <div class="section-heading">
           <p class="eyebrow">Signals</p>
-          <h2>Education, awards, and community</h2>
+          <h2>Education, research, and community</h2>
         </div>
         <dl class="signal-list">
           <div>
             <dt>Education</dt>
-            <dd>B.S. AI Engineering, Mohamed bin Zayed University of Artificial Intelligence</dd>
+            <dd>B.S. AI Engineering, Mohamed bin Zayed University of Artificial Intelligence, expected Fall 2029</dd>
           </div>
           <div>
-            <dt>Scholarships</dt>
-            <dd>Sheikh Tahnoon bin Zayed Scholarship in AI Excellence and Pioneer Scholarship</dd>
+            <dt>Honors</dt>
+            <dd>MBZUAI Dean's List; Sheikh Tahnoon bin Zayed Scholarship in AI Excellence; Pioneer Scholarship</dd>
           </div>
           <div>
-            <dt>Publication</dt>
-            <dd>Deadline-Valid Replay, ICML 2026 Hypothesis Testing Workshop paper</dd>
+            <dt>Research</dt>
+            <dd>ICML 2026 Mechanistic Interpretability Workshop, ICML 2026 Hypothesis Testing Workshop, and IJCAI/ECAI 2026 NILA Workshop</dd>
           </div>
           <div>
-            <dt>Competitions</dt>
-            <dd>Kaggle Competitions Silver Medal; 3rd place hackathon project for an AI workflow helper</dd>
-          </div>
-          <div>
-            <dt>Community</dt>
-            <dd>Founding peer tutor for calculus and linear algebra; MBZUAI climbing club president</dd>
+            <dt>Leadership</dt>
+            <dd>President of the MBZUAI Climbing Club and founding student peer tutor for Calculus and Linear Algebra</dd>
           </div>
         </dl>
       </section>
