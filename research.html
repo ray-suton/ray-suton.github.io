@@ -28,6 +28,7 @@
           <a href="index.html">Home</a>
           <a href="research.html" aria-current="page">Research</a>
           <a href="experience.html">Experience</a>
+          <a href="outside.html">Outside research</a>
           <a href="about.html">About</a>
         </nav>
       </div>
@@ -67,6 +68,32 @@
             <li>Developing, to our knowledge, the first benchmark jointly testing whether reasoning models accept valid, authorized mid-inference updates while rejecting false claims and adversarial instructions.</li>
             <li>Designed a factorized evaluation protocol separating update engagement from final-answer correctness, with a linear-probing study relating hidden-state representations of acceptance to model behavior.</li>
           </ul>
+        </article>
+
+        <article class="entry">
+          <h3>Learned Depth of Field</h3>
+          <p class="meta">With Prof. Lingqi Yan &middot; Joint project &middot; Sep 2026 &ndash; present</p>
+          <p class="lead">
+            Depth of field, the soft blur behind a sharp subject, is costly to render well. Can a
+            neural network produce it at interactive speed, matching the quality of the classic
+            screen-space method?
+          </p>
+          <ul>
+            <li><strong>Testbed.</strong> With a project partner, built an OpenGL renderer with a thin-lens model and a procedural scene. I work mainly on the data and learning side: a physically based Mitsuba 3 pipeline that renders sharp images, ground-truth depth of field, and depth for training on a GPU cluster, plus the models and their evaluation.</li>
+            <li><strong>Where the classic method breaks.</strong> Compared the screen-space blur with multi-view and ray-traced references on a scene built to expose its failure cases. Its error near occluding edges is structural: more samples barely help (mean error 4.9 on a 0&ndash;255 scale at 64 samples, versus 0.7 for multi-view accumulation).</li>
+            <li><strong>Learned models.</strong> Training compact image-to-image networks toward a speed target of about 30 ms per 1080p frame, and studying why large blurs (discs 64+ pixels wide) are hardest: data coverage, bokeh shape, and loss design. Smaller student models are distilled from larger ones and keep in-focus pixels exact.</li>
+            <li><strong>Next: video.</strong> Extending to moving cameras, focus pulls, and aperture changes, with a temporal loss and a flicker metric so the blur stays stable from frame to frame.</li>
+          </ul>
+          <div class="figs">
+            <figure>
+              <img src="assets/dof-cafe-sharp.jpg" alt="A rendered cafe table with a teapot, mug, and vase, everything in sharp focus" width="900" height="610" loading="lazy" />
+              <figcaption>Sharp render of the procedural cafe scene.</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/dof-cafe-dof.jpg" alt="The same scene with the teapot in focus and the background shelves and window blurred" width="900" height="610" loading="lazy" />
+              <figcaption>Thin-lens depth of field, focused on the teapot.</figcaption>
+            </figure>
+          </div>
         </article>
       </section>
 

@@ -438,3 +438,51 @@ section.wrap.intro-text {
     scroll-behavior: auto;
   }
 }
+
+/* Figures, awards, nav wrap */
+
+.site-header nav {
+  flex-wrap: wrap;
+}
+
+.figs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+  margin: 18px 0 4px;
+}
+
+.figs figure {
+  margin: 0;
+}
+
+.figs img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.figs figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.award {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.entry .lead {
+  margin-bottom: 4px;
+}
+
+@media (max-width: 640px) {
+  .figs {
+    grid-template-columns: 1fr;
+  }
+}

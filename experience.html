@@ -6,7 +6,7 @@
     <title>Experience | Rui Gao</title>
     <meta
       name="description"
-      content="Rui Gao's experience: machine learning engineer intern at GenBio AI, undergraduate researcher at MBZUAI, and hackathon projects."
+      content="Rui Gao's experience: machine learning engineer intern at GenBio AI, undergraduate researcher at MBZUAI, hackathons, and projects."
     />
     <meta name="color-scheme" content="light dark" />
     <meta property="og:type" content="website" />
@@ -28,6 +28,7 @@
           <a href="index.html">Home</a>
           <a href="research.html">Research</a>
           <a href="experience.html" aria-current="page">Experience</a>
+          <a href="outside.html">Outside research</a>
           <a href="about.html">About</a>
         </nav>
       </div>
@@ -36,7 +37,7 @@
     <main id="main">
       <section class="wrap page-title">
         <h1>Experience</h1>
-        <p>Industry and research roles, and hackathon projects.</p>
+        <p>Industry and research roles, hackathons, and projects.</p>
       </section>
 
       <section class="wrap">
@@ -58,7 +59,16 @@
           <div>
             <h3>Undergraduate Researcher</h3>
             <p class="org">MBZUAI</p>
-            <p>AI for computer graphics, with Prof. Lingqi Yan.</p>
+            <p>
+              AI for computer graphics, with Prof. Lingqi Yan. A joint project on learned depth of
+              field: training neural networks to produce camera-style background blur at
+              interactive speed (see the <a href="research.html">Research page</a>).
+            </p>
+            <ul>
+              <li>Together with a project partner, built an OpenGL testbed with a thin-lens model and measured where the classic screen-space blur breaks.</li>
+              <li>My side is the data and learning pipeline: physically based rendering of training data on a GPU cluster, the neural models, and their evaluation.</li>
+              <li>Now extending to video, with a temporal loss and a flicker metric.</li>
+            </ul>
           </div>
         </article>
       </section>
@@ -67,13 +77,27 @@
         <h2>Hackathons</h2>
 
         <article class="role">
+          <p class="role-date">2026</p>
+          <div>
+            <h3>Portal: Smart AI Helper Extension</h3>
+            <p class="org">Chunchao Hackathon, Beijing &middot; <span class="award">3rd place</span> among 30 teams</p>
+            <p>
+              Built a web automation agent as a browser extension that turns uploaded workflows
+              into agentic actions for forms, navigation, application use, and data entry.
+              Integrated web APIs and dynamic-page interaction for multi-step browser tasks.
+            </p>
+          </div>
+        </article>
+
+        <article class="role">
           <p class="role-date">Apr 2026</p>
           <div>
-            <h3>Context-Based Smart Agent Recommendation</h3>
-            <p class="org">Longhua Hackathon &middot; Team project</p>
+            <h3>BrewMatch: Matching for Coffee Chats</h3>
+            <p class="org">Longhua Hackathon &middot; <span class="award">3rd place</span> &middot; Team project</p>
             <p>
-              Built a context-based smart agent recommendation app: an async FastAPI backend that
-              serves a matching algorithm, a web front end, and Qwen model integration.
+              Built a context-based matching app that pairs people for coffee chats: an async
+              FastAPI backend serving the matching algorithm, a web front end, and Qwen model
+              integration.
             </p>
           </div>
         </article>
@@ -104,6 +128,39 @@
               export of the full report. React, TypeScript, Tailwind CSS.
             </p>
           </div>
+        </article>
+      </section>
+
+      <section class="wrap">
+        <h2>Projects</h2>
+
+        <article class="entry">
+          <h3>Chronos: Natural-Language Scheduling Product</h3>
+          <p class="meta">Oct 2025 &ndash; Feb 2026 &middot; React, TypeScript, Chrome extension, LLM APIs, Calendar APIs</p>
+          <ul>
+            <li>Built an application that converts natural-language scheduling requests into Google Calendar and Outlook events.</li>
+            <li>Shipped preview, edit, and delete; multi-event requests; recurring schedules; relative dates; timezone handling; undo/redo; command persistence; auth; and API validation.</li>
+          </ul>
+          <p class="entry-links"><a href="https://github.com/ray-suton/Chronos.AI">Code</a></p>
+        </article>
+
+        <article class="entry">
+          <h3>AI Archaeology of Chinese Songci</h3>
+          <p class="meta">Python, Jupyter, PyTorch, NLP, digital humanities</p>
+          <ul>
+            <li>Built a Songci NLP pipeline over classical-poetry JSON corpora, extracting cipai, line length, rhyme position, ping/ze tone, and rhythmic features.</li>
+            <li>Encoded character positions, line boundaries, rhyme slots, tone classes, and cipai templates into PyTorch sequence-modeling inputs.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <h3>Defect-Guided Verifier Search for Controlled LLM Generation</h3>
+          <p class="meta">Python, RLMs, LLM APIs, test-time search, evaluation</p>
+          <ul>
+            <li>Developed a controlled-generation system combining RLM-style hidden-context access with Defect-Guided Verifier Search over visible candidates.</li>
+            <li>Implemented typed schemas for facts, forbidden claims, constraints, verifier gates, repair targets, candidate logs, branch budgets, and token accounting.</li>
+            <li>Built a search loop that detects typed defects, repairs by branch, and reranks with verifier scores; evaluated on 20+ offline scripted probes.</li>
+          </ul>
         </article>
       </section>
     </main>
