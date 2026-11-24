@@ -486,3 +486,39 @@ section.wrap.intro-text {
     grid-template-columns: 1fr;
   }
 }
+
+/* Photography gallery */
+
+.figs figure.span {
+  grid-column: 1 / -1;
+}
+
+.photo-intro {
+  color: var(--muted);
+}
+
+.gallery {
+  columns: 2 320px;
+  column-gap: 14px;
+  margin-top: 18px;
+}
+
+.gallery figure {
+  margin: 0 0 14px;
+  break-inside: avoid;
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--soft);
+}
+
+.gallery figcaption {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
