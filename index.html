@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Rui Gao is an AI Engineering undergraduate at MBZUAI focused on LLM systems, agentic workflows, and model evaluation."
+      content="Rui Gao is an AI undergraduate at MBZUAI researching LLM reasoning, representations, and efficient inference."
     />
-    <title>Rui Gao | AI Research and Builder Portfolio</title>
+    <title>Rui Gao | AI Research Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Rui Gao home">Rui Gao</a>
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#work">Work</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
         <a href="#focus">Focus</a>
-        <a href="#signals">Signals</a>
+        <a href="#background">Background</a>
         <a href="https://github.com/ray-suton">GitHub</a>
         <a href="https://www.linkedin.com/in/rui-gao-gr/">LinkedIn</a>
       </nav>
@@ -25,13 +26,12 @@
     <main id="top">
       <section class="intro band">
         <div class="intro-copy">
-          <p class="eyebrow">MBZUAI AI Engineering undergraduate</p>
-          <h1>Building LLM systems, agentic workflows, and evaluation pipelines.</h1>
+          <p class="eyebrow">AI undergraduate at MBZUAI</p>
+          <h1>Researching LLM reasoning, representations, and efficient inference.</h1>
           <p class="lede">
-            I am focused on LLM systems, agentic workflows, and model evaluation, with
-            experience building data pipelines, PyTorch prototypes, and reliability-oriented
-            AI applications. My current interests include statistical learning, sequence
-            modeling, decision systems, NLP, and reliable LLM deployment.
+            I am an AI undergraduate at MBZUAI. My research spans efficient diffusion language
+            models, whether reasoning models accept valid mid-inference updates, hidden-state
+            geometry, and rigorous evaluation of language models. I also enjoy music and climbing.
           </p>
           <div class="actions" aria-label="Primary links">
             <a class="button primary" href="https://github.com/ray-suton">View GitHub</a>
@@ -48,96 +48,147 @@
           />
           <figcaption>
             B.S. in AI Engineering at Mohamed bin Zayed University of Artificial Intelligence,
-            expected Fall 2029.
+            Aug 2025 to expected Fall 2029. Shanghai / Abu Dhabi.
           </figcaption>
         </figure>
       </section>
 
-      <section id="work" class="work band">
+      <section id="research" class="work band">
         <div class="section-heading">
-          <p class="eyebrow">Selected work</p>
-          <h2>Research and builder projects</h2>
+          <p class="eyebrow">Research &amp; publications</p>
+          <h2>Current projects and papers</h2>
         </div>
 
         <div class="project-grid">
           <article class="project">
             <div>
-              <p class="project-type">LLM inference policy evaluation</p>
-              <h3>Deadline-Valid Replay</h3>
+              <p class="project-type">Efficient diffusion language models</p>
+              <h3>Phase3Lock: Three-Phase Locking for Efficient Diffusion Language Models</h3>
+              <p class="project-meta">In progress, Sep 2026 to present, with Prof. Zhiqiang Shen and team. Targeting ICML 2027.</p>
               <p>
-                First-author ICML 2026 Hypothesis Testing Workshop project designing statistical
-                evaluation methods for LLM inference policies under latency deadlines, separating
-                leaderboard gaps from certified policy-level advantages.
+                Separates token commitment, representation reuse, and selective computation, with
+                distinct criteria for commitment risk, stale-reference risk, and runtime
+                efficiency. Existing acceleration methods conflate at least two of these
+                decisions; governing each independently matches full-compute answer quality while
+                improving inference efficiency.
               </p>
             </div>
-            <a href="https://github.com/ray-suton/Deadline_Valid">Repository</a>
+          </article>
+
+          <article class="project">
+            <div>
+              <p class="project-type">Reasoning model evaluation</p>
+              <h3>LLM Reasoning Injection and Interruptible Reasoning: Selective Update Acceptance</h3>
+              <p class="project-meta">In progress, Aug 2026 to present, with Prof. Zangir Iklassov.</p>
+              <p>
+                Developing, to our knowledge, the first benchmark jointly testing whether
+                reasoning models accept valid, authorized mid-inference updates while rejecting
+                false claims and adversarial instructions. A factorized protocol separates update
+                engagement from answer correctness, and a linear-probing study relates
+                hidden-state representations of acceptance to model behavior. Inspired by
+                &ldquo;Are Large Reasoning Models Interruptible?&rdquo;
+              </p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div>
+              <p class="project-type">Multilingual and cultural evaluation</p>
+              <h3>EoKono: Benchmarking LLM's Understanding of Esperanto Language and Culture</h3>
+              <p class="project-meta">Coauthor. Under review at ACL Rolling Review.</p>
+              <p>
+                An Esperanto benchmark of 23 language models and 2,667 questions reviewed by nine
+                qualified speakers. Compares multiple-choice, true/false, and short-answer
+                evaluation, revealing gaps between linguistic knowledge and understanding of
+                Esperanto history and culture.
+              </p>
+            </div>
           </article>
 
           <article class="project">
             <div>
               <p class="project-type">LLM hidden-state geometry</p>
               <h3>Metric Choice Determines Semantic Geometry in LLM Hidden States</h3>
+              <p class="project-meta">First author. ICML 2026 Mechanistic Interpretability Workshop.</p>
               <p>
-                First-author ICML 2026 Mechanistic Interpretability Workshop project analyzing
-                layerwise hidden-state geometry, showing raw L2 expansion is driven by norm growth
-                while centered cosine better reveals semantic, topic, and category structure.
+                Raw L2 tracks norm growth across layers, while centered cosine reveals semantic,
+                topic, and category structure.
               </p>
             </div>
-            <a href="https://github.com/ray-suton/LLM_Expansion">Repository</a>
+            <p class="project-links">
+              <a href="https://openreview.net/forum?id=PygdYDVgQc">OpenReview</a>
+              <a href="https://github.com/ray-suton/LLM_Expansion">Repository</a>
+            </p>
           </article>
 
           <article class="project">
             <div>
-              <p class="project-type">Natural-language scheduling product</p>
-              <h3>Chronos: Natural-Language Scheduling</h3>
+              <p class="project-type">LLM inference policy evaluation</p>
+              <h3>Deadline-Valid Replay: Anytime-Valid Testing for LLM Inference Policies</h3>
+              <p class="project-meta">First author. ICML 2026 Hypothesis Testing Workshop.</p>
               <p>
-                Built an application that converts natural-language scheduling requests into
-                Google Calendar and Outlook events, including preview, edit, delete, multi-event
-                requests, recurring schedules, relative dates, timezone handling, undo/redo,
-                command persistence, auth, and API validation.
+                An anytime-valid replay protocol separating apparent leaderboard gaps from
+                certified policy-level advantages.
               </p>
             </div>
-            <a href="https://github.com/ray-suton/Chronos.AI">Repository</a>
-          </article>
-
-          <article class="project">
-            <div>
-              <p class="project-type">Controlled LLM generation</p>
-              <h3>RLM: Defect-Guided Verifier Search</h3>
-              <p>
-                Ongoing ICML 2027-oriented project developing a controlled-generation system
-                combining RLM-style hidden-context access with Defect-Guided Verifier Search over
-                visible candidates, with typed schemas for facts, forbidden claims, constraints,
-                verifier gates, repair targets, candidate logs, branch budgets, and token accounting.
-              </p>
-            </div>
-            <p class="project-link-note">Repository link withheld while the project is being prepared for an ICML 2027 submission.</p>
-          </article>
-
-          <article class="project">
-            <div>
-              <p class="project-type">NLP and digital humanities</p>
-              <h3>AI Archaeology of Chinese Songci</h3>
-              <p>
-                Ongoing ISMIR 2027-oriented project building a Songci NLP pipeline over classical
-                poetry JSON corpora, extracting cipai, line length, rhyme position, ping/ze tone,
-                and rhythmic features into PyTorch sequence-modeling inputs.
-              </p>
-            </div>
-            <p class="project-link-note">Repository link withheld while the project is being prepared for an ISMIR 2027 submission.</p>
+            <p class="project-links">
+              <a href="https://openreview.net/forum?id=KcqIBf7un6">OpenReview</a>
+              <a href="https://github.com/ray-suton/Deadline_Valid">Repository</a>
+            </p>
           </article>
 
           <article class="project">
             <div>
               <p class="project-type">Symbolic reasoning verification</p>
-              <h3>SymStep</h3>
+              <h3>SymStep: Symbolic Step Verification for Logical Reasoning</h3>
+              <p class="project-meta">Coauthor. IJCAI-ECAI 2026 NILA Workshop.</p>
               <p>
-                Co-developed step-level symbolic verification for LLM reasoning, using constraint
-                propagation to check atomic deductions and strengthen constraint-dense logical
-                reasoning.
+                Step-wise symbolic verification with constraint-guided LLM reasoning; 97% accuracy
+                on a ZebraLogicBench subset.
               </p>
             </div>
-            <p class="project-link-note">Workshop paper at IJCAI/ECAI 2026 NILA.</p>
+            <p class="project-links">
+              <a href="https://openreview.net/forum?id=THDsMgkDaj">OpenReview</a>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="experience band">
+        <div class="section-heading">
+          <p class="eyebrow">Experience</p>
+          <h2>Industry and research roles</h2>
+        </div>
+
+        <div class="role-list">
+          <article class="role">
+            <p class="role-date">May 2026 &ndash; Oct 2026</p>
+            <div>
+              <h3>Machine Learning Engineer Intern</h3>
+              <p class="role-org">GenBio AI</p>
+              <ul>
+                <li>
+                  Established expert-designed baselines for VCHarness, an agentic framework for
+                  biomedical model construction and prediction, combining an LLM coding agent,
+                  Monte Carlo Tree Search (MCTS), and biological foundation models.
+                </li>
+                <li>
+                  Optimized MCTS-based search strategies, improving overall benchmark Macro-F1 by
+                  7 percentage points.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="role">
+            <p class="role-date">Aug 2025 &ndash; Present</p>
+            <div>
+              <h3>Undergraduate Researcher</h3>
+              <p class="role-org">MBZUAI</p>
+              <ul>
+                <li>AI for computer graphics, with Prof. Lingqi Yan.</li>
+              </ul>
+            </div>
           </article>
         </div>
       </section>
@@ -145,37 +196,69 @@
       <section id="focus" class="focus band">
         <div class="section-heading">
           <p class="eyebrow">Current focus</p>
-          <h2>Questions I am building around</h2>
+          <h2>Questions I am working on</h2>
         </div>
         <div class="focus-list">
-          <p>How should LLM inference policies be evaluated when latency, tokens, and compute are limited?</p>
-          <p>When do layerwise hidden-state distances support falsifiable semantic interpretations?</p>
-          <p>How can controlled generation improve validity without hiding quality or cost tradeoffs?</p>
-          <p>What can sequence models reveal about structure in classical Chinese poetry?</p>
+          <p>How can diffusion language models decode faster without conflating when to commit, when to reuse, and when to compute?</p>
+          <p>Will a reasoning model accept a valid, authorized update mid-inference, and reject a false or adversarial one?</p>
+          <p>What do hidden-state geometry and linear probes reveal about how language models represent meaning and acceptance?</p>
+          <p>How do we evaluate language models and inference policies rigorously, across languages, cultures, and deadlines?</p>
         </div>
+        <p class="interests">
+          Interests: reasoning, interpretability, agentic systems, rigorous evaluation, computer
+          vision, robotics, performing arts.
+        </p>
       </section>
 
-      <section id="signals" class="signals band">
+      <section id="background" class="signals band">
         <div class="section-heading">
-          <p class="eyebrow">Signals</p>
-          <h2>Education, research, and community</h2>
+          <p class="eyebrow">Background</p>
+          <h2>Education, honors, and community</h2>
         </div>
         <dl class="signal-list">
           <div>
             <dt>Education</dt>
-            <dd>B.S. AI Engineering, Mohamed bin Zayed University of Artificial Intelligence, expected Fall 2029</dd>
+            <dd>
+              B.S. in AI Engineering, Mohamed bin Zayed University of Artificial Intelligence,
+              Aug 2025 to expected Fall 2029. GPA 3.82/4.0. Coursework: Deep Learning; Large
+              Language Models; NLP; Computer Vision and Medical Imaging.
+            </dd>
           </div>
           <div>
             <dt>Honors</dt>
-            <dd>MBZUAI Dean's List; Sheikh Tahnoon bin Zayed Scholarship in AI Excellence; Pioneer Scholarship</dd>
+            <dd>MBZUAI Dean's List (Top 10%); Sheikh Tahnoon bin Zayed Scholarship in AI Excellence; Pioneer Scholarship</dd>
           </div>
           <div>
-            <dt>Research</dt>
-            <dd>ICML 2026 Mechanistic Interpretability Workshop, ICML 2026 Hypothesis Testing Workshop, and IJCAI/ECAI 2026 NILA Workshop</dd>
+            <dt>Competitions</dt>
+            <dd>Gold Medal, Kaggle Open Problems: Single-Cell Perturbations; Silver Medal, Kaggle HMS: Harmful Brain Activity Classification</dd>
+          </div>
+          <div>
+            <dt>Service</dt>
+            <dd>Reviewer, NeurIPS 2026 Sim2Science Workshop</dd>
+          </div>
+          <div>
+            <dt>Teaching</dt>
+            <dd>Founding Student Peer Tutor at MBZUAI (Aug 2025 to present), tutoring Calculus, Linear Algebra, DSA, and Deep Learning through individual learning plans and office-hour-style sessions</dd>
           </div>
           <div>
             <dt>Leadership</dt>
-            <dd>President of the MBZUAI Climbing Club and founding student peer tutor for Calculus and Linear Algebra</dd>
+            <dd>Founder and President of the MBZUAI Climbing Club (50+ students)</dd>
+          </div>
+        </dl>
+
+        <h3 class="subheading">Technical skills</h3>
+        <dl class="signal-list">
+          <div>
+            <dt>Languages</dt>
+            <dd>Python, C++, SQL, TypeScript/JavaScript</dd>
+          </div>
+          <div>
+            <dt>ML/AI</dt>
+            <dd>Deep learning, CNN, NLP, LLM evaluation, linear probing, interpretability, agentic systems</dd>
+          </div>
+          <div>
+            <dt>Tools</dt>
+            <dd>PyTorch, Hugging Face Transformers, TensorFlow, Git/GitHub, Docker, Linux/HPC/GPU, Slurm</dd>
           </div>
         </dl>
       </section>

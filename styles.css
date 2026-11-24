@@ -242,8 +242,69 @@ h3 {
   font-weight: 730;
 }
 
+.project .project-meta {
+  margin-bottom: 12px;
+  color: var(--teal);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.project .project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.experience {
+  background: var(--bg);
+}
+
+.role-list {
+  border-bottom: 1px solid var(--line);
+}
+
+.role {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 32px;
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
+}
+
+.role-date {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.role h3 {
+  margin-bottom: 4px;
+}
+
+.role-org {
+  margin: 0 0 12px;
+  color: var(--rust);
+  font-weight: 700;
+}
+
+.role ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #30363d;
+}
+
+.role li + li {
+  margin-top: 8px;
+}
+
 .focus {
   background: #eef5f3;
+}
+
+.interests {
+  margin: 24px 0 0;
+  color: #22312f;
+  font-size: 1.04rem;
 }
 
 .focus-list {
@@ -269,9 +330,17 @@ h3 {
 
 .signal-list {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
   margin: 0;
+}
+
+.subheading {
+  margin: 44px 0 16px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 780;
+  text-transform: uppercase;
 }
 
 .signal-list div {
@@ -365,6 +434,11 @@ h3 {
 
   .signal-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .role {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 }
 
