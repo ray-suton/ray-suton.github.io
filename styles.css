@@ -121,7 +121,7 @@ dd {
   color: var(--ink);
 }
 
-.site-header nav a[aria-current="page"] {
+.site-header nav a[aria-current] {
   border-bottom-color: var(--accent);
   color: var(--ink);
   font-weight: 600;
@@ -521,4 +521,84 @@ section.wrap.intro-text {
   margin-top: 6px;
   color: var(--muted);
   font-size: 0.88rem;
+}
+
+/* Sub-headings, lyrics, videos */
+
+.subhead {
+  margin: 32px 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.lyrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.lyric {
+  margin: 0;
+  padding: 16px 18px;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  background: var(--soft);
+}
+
+.lyric p {
+  margin: 0;
+  line-height: 1.65;
+}
+
+.lyric .gloss {
+  margin-top: 10px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.lyric cite {
+  display: block;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-style: normal;
+}
+
+.videos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+  margin-top: 18px;
+}
+
+.videos figure {
+  margin: 0;
+}
+
+.videos video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #000;
+}
+
+.videos figcaption {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+@media (max-width: 640px) {
+  .lyrics,
+  .videos {
+    grid-template-columns: 1fr;
+  }
 }
