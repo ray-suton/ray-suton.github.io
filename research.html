@@ -74,26 +74,14 @@
           <h3>Learned Depth of Field</h3>
           <p class="meta">With Prof. Lingqi Yan &middot; Joint project &middot; Sep 2026 &ndash; present</p>
           <p class="lead">
-            Depth of field, the soft blur behind a sharp subject, is costly to render well. Can a
-            neural network produce it at interactive speed, matching the quality of the classic
-            screen-space method?
+            Depth of field is the soft blur behind a sharp subject. This project explores whether
+            a neural network can produce it at interactive speed, with quality close to
+            traditional rendering methods.
           </p>
-          <ul>
-            <li><strong>Testbed.</strong> With a project partner, built an OpenGL renderer with a thin-lens model and a procedural scene. I work mainly on the data and learning side: a physically based Mitsuba 3 pipeline that renders sharp images, ground-truth depth of field, and depth for training on a GPU cluster, plus the models and their evaluation.</li>
-            <li><strong>Where the classic method breaks.</strong> Compared the screen-space blur with multi-view and ray-traced references on a scene built to expose its failure cases. Its error near occluding edges is structural: more samples barely help (mean error 4.9 on a 0&ndash;255 scale at 64 samples, versus 0.7 for multi-view accumulation).</li>
-            <li><strong>Learned models.</strong> Training compact image-to-image networks toward a speed target of about 30 ms per 1080p frame, and studying why large blurs (discs 64+ pixels wide) are hardest: data coverage, bokeh shape, and loss design. Smaller student models are distilled from larger ones and keep in-focus pixels exact.</li>
-            <li><strong>Next: video.</strong> Extending to moving cameras, focus pulls, and aperture changes, with a temporal loss and a flicker metric so the blur stays stable from frame to frame.</li>
-          </ul>
-          <div class="figs">
-            <figure>
-              <img src="assets/dof-cafe-sharp.jpg" alt="A rendered cafe table with a teapot, mug, and vase, everything in sharp focus" width="900" height="610" loading="lazy" />
-              <figcaption>Sharp render of the procedural cafe scene.</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/dof-cafe-dof.jpg" alt="The same scene with the teapot in focus and the background shelves and window blurred" width="900" height="610" loading="lazy" />
-              <figcaption>Thin-lens depth of field, focused on the teapot.</figcaption>
-            </figure>
-          </div>
+          <p>
+            A joint project: we build the rendering testbed, generate training data, train neural
+            models, and evaluate them, and we are now extending the work to video.
+          </p>
         </article>
       </section>
 
