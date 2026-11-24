@@ -602,3 +602,7 @@ section.wrap.intro-text {
     grid-template-columns: 1fr;
   }
 }
+
+.lyrics .lyric:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
