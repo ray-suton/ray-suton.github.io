@@ -606,3 +606,15 @@ section.wrap.intro-text {
 .lyrics .lyric:last-child:nth-child(odd) {
   grid-column: 1 / -1;
 }
+
+/* Three-up figure row (sketches and a street photo) */
+
+.figs.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 640px) {
+  .figs.three {
+    grid-template-columns: 1fr;
+  }
+}
