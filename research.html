@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Research | Rui Gao</title>
+    <meta
+      name="description"
+      content="Research and publications by Rui Gao: efficient diffusion language models, interruptible reasoning, LLM evaluation, and interpretability."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Research | Rui Gao" />
+    <meta property="og:image" content="https://ray-suton.github.io/assets/rui-gao.jpg" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231d4ed8'/%3E%3Ctext x='16' y='22' font-size='15' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='white'%3ERG%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap bar">
+        <a class="brand" href="index.html">Rui Gao</a>
+        <nav aria-label="Main">
+          <a href="index.html">Home</a>
+          <a href="research.html" aria-current="page">Research</a>
+          <a href="experience.html">Experience</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="wrap page-title">
+        <h1>Research</h1>
+        <p>
+          My work is on LLM reasoning, representations, and efficient inference, with a focus on
+          rigorous evaluation.
+        </p>
+      </section>
+
+      <section class="wrap">
+        <h2>In progress</h2>
+
+        <article class="entry">
+          <h3>Phase3Lock: Three-Phase Locking for Efficient Diffusion Language Models</h3>
+          <p class="meta">With Prof. Zhiqiang Shen and team &middot; Sep 2026 &ndash; present &middot; Targeting ICML 2027</p>
+          <p>Makes diffusion language models faster without giving up answer quality.</p>
+          <ul>
+            <li>Introduced a three-way separation of token commitment, representation reuse, and selective computation, with distinct criteria for commitment risk, stale-reference risk, and runtime efficiency.</li>
+            <li>Systematically evaluated major prior acceleration strategies, showing that existing methods conflate at least two of these decisions and obscure the source of quality degradation.</li>
+            <li>Developed a three-phase locking strategy that governs each decision independently, matching full-compute answer quality while improving inference efficiency and outperforming prior methods that trade quality for speed.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <h3>LLM Reasoning Injection and Interruptible Reasoning: Selective Update Acceptance</h3>
+          <p class="meta">With Prof. Zangir Iklassov &middot; Aug 2026 &ndash; present &middot; Inspired by &ldquo;Are Large Reasoning Models Interruptible?&rdquo;</p>
+          <p>
+            Do reasoning models accept a valid, authorized update mid-inference, while rejecting
+            false claims and adversarial instructions?
+          </p>
+          <ul>
+            <li>Developing, to our knowledge, the first benchmark jointly testing whether reasoning models accept valid, authorized mid-inference updates while rejecting false claims and adversarial instructions.</li>
+            <li>Designed a factorized evaluation protocol separating update engagement from final-answer correctness, with a linear-probing study relating hidden-state representations of acceptance to model behavior.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="wrap">
+        <h2>Under review</h2>
+
+        <article class="entry">
+          <h3>EoKono: Benchmarking LLM's Understanding of Esperanto Language and Culture</h3>
+          <p class="meta">Coauthor &middot; ACL Rolling Review</p>
+          <p>How well do language models understand Esperanto language and culture?</p>
+          <ul>
+            <li>Coauthored an Esperanto benchmark: 23 language models, 2,667 questions reviewed by nine qualified speakers.</li>
+            <li>Compared multiple-choice, independent true/false, and short-answer evaluation, revealing gaps between linguistic knowledge and understanding of Esperanto history and culture.</li>
+            <li>Examined how prompt language affects cultural knowledge and geographical representation in generated stories.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="wrap">
+        <h2>Workshop papers</h2>
+
+        <article class="entry">
+          <h3>Metric Choice Determines Semantic Geometry in LLM Hidden States</h3>
+          <p class="meta">First author &middot; <em>ICML 2026 Mechanistic Interpretability Workshop</em></p>
+          <p>
+            Raw L2 distance tracks norm growth across layers, while centered cosine reveals
+            semantic, topic, and category structure.
+          </p>
+          <p class="entry-links">
+            <a href="https://openreview.net/forum?id=PygdYDVgQc">OpenReview</a>
+            <a href="https://github.com/ray-suton/LLM_Expansion">Code</a>
+          </p>
+        </article>
+
+        <article class="entry">
+          <h3>Deadline-Valid Replay: Anytime-Valid Testing for LLM Inference Policies</h3>
+          <p class="meta">First author &middot; <em>ICML 2026 Hypothesis Testing Workshop</em></p>
+          <p>
+            An anytime-valid replay protocol that separates apparent leaderboard gaps from
+            certified policy-level advantages.
+          </p>
+          <p class="entry-links">
+            <a href="https://openreview.net/forum?id=KcqIBf7un6">OpenReview</a>
+            <a href="https://github.com/ray-suton/Deadline_Valid">Code</a>
+          </p>
+        </article>
+
+        <article class="entry">
+          <h3>SymStep: Symbolic Step Verification for Logical Reasoning</h3>
+          <p class="meta">Coauthor &middot; <em>IJCAI-ECAI 2026 NILA Workshop</em></p>
+          <p>
+            Step-wise symbolic verification with constraint-guided LLM reasoning; 97% accuracy on
+            a ZebraLogicBench subset.
+          </p>
+          <p class="entry-links">
+            <a href="https://openreview.net/forum?id=THDsMgkDaj">OpenReview</a>
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap bar">
+        <p>Rui Gao &middot; Shanghai / Abu Dhabi</p>
+        <p>
+          <a href="https://github.com/ray-suton">GitHub</a>
+          <a href="https://www.linkedin.com/in/rui-gao-gr/">LinkedIn</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
