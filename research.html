@@ -74,13 +74,22 @@
           <h3>Learned Depth of Field</h3>
           <p class="meta">With Prof. Lingqi Yan &middot; Joint project &middot; Sep 2026 &ndash; present</p>
           <p class="lead">
-            Depth of field is the soft blur behind a sharp subject. This project explores whether
-            a neural network can produce it at interactive speed, with quality close to
-            traditional rendering methods.
+            Depth of field is the soft blur behind a sharp subject, the effect that makes
+            photographs and films look cinematic. Games and other real-time graphics fake it with
+            a fast screen-space trick, and it breaks down near object edges. Our project asks
+            whether a neural network can do better: given a sharp image, its depth, and the
+            camera's lens settings, produce a realistic depth-of-field image fast enough for
+            interactive use.
           </p>
+          <ul>
+            <li><strong>Why it is hard.</strong> A real lens blurs light, not pixels: an out-of-focus point becomes a disc (the &ldquo;bokeh&rdquo;), and what lies behind a foreground object matters. The classic screen-space method only sees what is visible, so it struggles around occluding edges. Large blurs are the hardest case for a network, because each pixel needs context from far away and big blurs are rare in training data.</li>
+            <li><strong>What we build.</strong> A controlled testbed of synthetic scenes where we know the true depth and can render physically correct depth of field as ground truth. We generate training data across a realistic range of lenses and apertures, train networks to reproduce it, and compare them with the classic method on scenes the models have never seen.</li>
+            <li><strong>Making it fast.</strong> The goal is interactive speed on real hardware. We train a larger, more accurate model first and then distill it into smaller student models, so lighter devices can run a smaller network while in-focus areas stay exactly sharp.</li>
+            <li><strong>Next: video.</strong> In a game the camera moves and the focus changes, so the blur has to stay stable from frame to frame. We are extending the work to video and measuring flicker.</li>
+          </ul>
           <p>
-            A joint project: we build the rendering testbed, generate training data, train neural
-            models, and evaluate them, and we are now extending the work to video.
+            Work in progress, joint with a fellow student; I work mainly on the training data, the
+            models, and their evaluation. We plan to release a public demo.
           </p>
         </article>
       </section>
